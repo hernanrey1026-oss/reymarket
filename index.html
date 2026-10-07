@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+function comprar(producto){<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -190,4 +190,17 @@ footer{
     <div class="producto">
       <div class="imagen">👟</div>
       <h3>Calzado</h3>
-      <p>Zapatos y productos para
+      <p>Zapatos y productos parafunction comprar(producto){
+
+  const numero = "573172394915";
+
+  const mensaje = encodeURIComponent(
+    "Hola, quiero comprar " + producto + " en ReyMarket."
+  );
+
+  window.open(
+    "https://wa.me/" + numero + "?text=" + mensaje,
+    "_blank"
+  );
+
+}
