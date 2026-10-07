@@ -187,4 +187,80 @@ footer{
       </button>
     </div>
 
-   
+       <div class="producto">
+      <div class="imagen">👟</div>
+      <h3>Calzado</h3>
+      <p>Zapatos y productos para toda la familia.</p>
+      <div class="precio">Desde $59.900</div>
+      <button onclick="comprar('Calzado')">
+        Comprar
+      </button>
+    </div>
+
+    <div class="producto">
+      <div class="imagen">🏠</div>
+      <h3>Hogar</h3>
+      <p>Productos útiles para tu hogar.</p>
+      <div class="precio">Desde $29.900</div>
+      <button onclick="comprar('Hogar')">
+        Comprar
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <strong>👑 ReyMarket</strong>
+  <p>Marketplace colombiano</p>
+  <p>© 2026 ReyMarket</p>
+</footer>
+
+<script>
+
+function buscarProducto(){
+
+  let texto =
+    document.getElementById("busqueda")
+    .value
+    .toLowerCase();
+
+  let productos =
+    document.querySelectorAll(".producto");
+
+  productos.forEach(function(producto){
+
+    let contenido =
+      producto.innerText.toLowerCase();
+
+    if(contenido.includes(texto)){
+      producto.style.display = "";
+    }else{
+      producto.style.display = "none";
+    }
+
+  });
+
+}
+
+function comprar(producto){
+
+  const numero = "573172394915";
+
+  const mensaje = encodeURIComponent(
+    "Hola, quiero comprar " + producto +
+    " en ReyMarket."
+  );
+
+  window.open(
+    "https://wa.me/" + numero + "?text=" + mensaje,
+    "_blank"
+  );
+
+}
+
+</script>
+
+</body>
+</html>
