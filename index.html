@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ReyMarket - Marketplace Colombia</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f4f4f4;
+  color:#222;
+}
+
+header{
+  background:#111827;
+  color:white;
+  padding:22px 15px;
+  text-align:center;
+}
+
+header h1{
+  margin:0;
+  font-size:32px;
+}
+
+header p{
+  margin:7px 0 0;
+  color:#d1d5db;
+}
+
+.buscador{
+  background:white;
+  padding:15px;
+  text-align:center;
+}
+
+.buscador input{
+  width:95%;
+  max-width:600px;
+  padding:14px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:16px;
+}
+
+.contenedor{
+  max-width:1100px;
+  margin:auto;
+  padding:20px 15px;
+}
+
+.presentacion{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.presentacion h2{
+  margin-top:0;
+}
+
+.boton{
+  display:inline-block;
+  background:#16a34a;
+  color:white;
+  padding:13px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+.productos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+
+.producto{
+  background:white;
+  border-radius:15px;
+  padding:15px;
+  box-shadow:0 2px 8px #ddd;
+}
+
+.producto .imagen{
+  height:160px;
+  background:#e5e7eb;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:55px;
+}
+
+.producto h3{
+  margin-bottom:5px;
+}
+
+.precio{
+  color:#16a34a;
+  font-size:21px;
+  font-weight:bold;
+}
+
+.producto button{
+  width:100%;
+  border:0;
+  background:#111827;
+  color:white;
+  padding:12px;
+  border-radius:9px;
+  font-size:16px;
+  margin-top:10px;
+}
+
+footer{
+  margin-top:30px;
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>👑 ReyMarket</h1>
+  <p>Tu marketplace colombiano</p>
+</header>
+
+<div class="buscador">
+  <input
+    type="text"
+    id="busqueda"
+    placeholder="🔎 Buscar productos..."
+    onkeyup="buscarProducto()"
+  >
+</div>
+
+<div class="contenedor">
+
+  <div class="presentacion">
+    <h2>Bienvenido a ReyMarket</h2>
+    <p>
+      Compra productos de diferentes vendedores
+      en un solo lugar.
+    </p>
+
+    <a class="boton" href="#productos">
+      Ver productos
+    </a>
+  </div>
+
+  <h2 id="productos">Productos destacados</h2>
+
+  <div class="productos">
+
+    <div class="producto">
+      <div class="imagen">📱</div>
+      <h3>Celulares</h3>
+      <p>Encuentra celulares y accesorios.</p>
+      <div class="precio">Desde $299.900</div>
+      <button onclick="comprar('Celulares')">
+        Comprar
+      </button>
+    </div>
+
+    <div class="producto">
+      <div class="imagen">🎧</div>
+      <h3>Audífonos</h3>
+      <p>Audífonos y tecnología.</p>
+      <div class="precio">Desde $39.900</div>
+      <button onclick="comprar('Audífonos')">
+        Comprar
+      </button>
+    </div>
+
+    <div class="producto">
+      <div class="imagen">👟</div>
+      <h3>Calzado</h3>
+      <p>Zapatos y productos para
