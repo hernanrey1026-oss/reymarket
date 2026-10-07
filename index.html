@@ -253,14 +253,5 @@ function comprar(producto){
     " en ReyMarket."
   );
 
-  window.open(
-    "https://wa.me/" + numero + "?text=" + mensaje,
-    "_blank"
-  );
-
-}
-
-</script>
-
-</body>
-</html>
+ window.location.href =
+  "https://wa.me/" + numero + "?text=" + mensaje;
