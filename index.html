@@ -423,7 +423,7 @@ document.querySelectorAll(".producto .boton").forEach(function(boton){
 
 function actualizarCarrito(){
 
-  contadorCarrito.innerText = carrito.length;
+  document.getElementById("contadorCarrito").innerText = carrito.length;
 
   if(carrito.length === 0){
     listaCarrito.innerHTML = "Tu carrito está vacío.";
