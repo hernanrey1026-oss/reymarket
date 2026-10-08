@@ -287,6 +287,38 @@ function buscarProducto(){
 
   });
 
+
+  const numero = "573172394915";
+
+  const mensaje = encodeURIComponent(
+    "Hola, quiero comprar " + producto +
+    " en ReyMarket."
+  );
+<script>
+
+function buscarProducto(){
+
+  let texto =
+    document.getElementById("busqueda")
+    .value
+    .toLowerCase();
+
+  let productos =
+    document.querySelectorAll(".producto");
+
+  productos.forEach(function(producto){
+
+    let contenido =
+      producto.innerText.toLowerCase();
+
+    if(contenido.includes(texto)){
+      producto.style.display = "";
+    }else{
+      producto.style.display = "none";
+    }
+
+  });
+
 }
 
 function comprar(producto){
@@ -298,5 +330,9 @@ function comprar(producto){
     " en ReyMarket."
   );
 
- window.location.href =
-  "https://wa.me/" + numero + "?text=" + mensaje;
+  window.location.href =
+    "https://wa.me/" + numero + "?text=" + mensaje;
+
+}
+
+</script>
