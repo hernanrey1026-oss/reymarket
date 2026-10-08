@@ -311,10 +311,8 @@ function buscarProducto(){
   border-radius:50%;
   padding:3px 7px;
   font-size:13px;
-}
-
-#carritoPanel{
-  display:none;
+#ventanaCarrito{
+    display:none;
   position:fixed;
   left:10px;
   right:10px;
@@ -380,11 +378,20 @@ function buscarProducto(){
 <script>
 let carrito = [];
 
-const carritoBtn = document.getElementById("carritoBtn");
-const carritoPanel = document.getElementById("carritoPanel");
-const listaCarrito = document.getElementById("listaCarrito");
-const contadorCarrito = document.getElementById("contadorCarrito");
-const totalCarrito = document.getElementById("totalCarrito");
+const carritoBtn =
+document.getElementById("carritoBtn");
+
+const ventanaCarrito =
+document.getElementById("ventanaCarrito");
+
+const listaCarrito =
+document.getElementById("listaCarrito");
+
+const cantidadCarrito =
+document.getElementById("cantidadCarrito");
+
+const totalCarrito =
+document.getElementById("totalCarrito");
 
 document.querySelectorAll(".producto .boton").forEach(function(boton){
 
@@ -408,8 +415,8 @@ document.querySelectorAll(".producto .boton").forEach(function(boton){
 
     actualizarCarrito();
 
-    carritoPanel.style.display = "block";
-  });
+    
+ ventanaCarrito.style.display = "block";
 
 });
 
@@ -454,14 +461,6 @@ function eliminarProducto(indice){
 
   actualizarCarrito();
 }
-
-carritoBtn.addEventListener("click",function(){
-
-  if(carritoPanel.style.display === "block"){
-    carritoPanel.style.display = "none";
-  }else{
-    carritoPanel.style.display = "block";
-  }
 
 });
 
