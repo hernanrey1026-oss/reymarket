@@ -557,3 +557,19 @@ font-weight:bold;
 Enviar pedido por WhatsApp
 </button>
 
+</div>
+
+<script>
+document.getElementById("carritoCaja").addEventListener("click", function(){
+    const ventana = document.getElementById("ventanaCarrito");
+
+    if (ventana.style.display === "none" || ventana.style.display === "") {
+        ventana.style.display = "block";
+    } else {
+        ventana.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>
