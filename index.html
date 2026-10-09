@@ -489,19 +489,14 @@ document.getElementById("enviarPedido")
   mensaje += "%0ATotal: $" +
     total.toLocaleString("es-CO");
 
-  const botonExistente =
-    document.querySelector(".producto .boton");
+ 
+const numero = "573XXXXXXXXX";
 
-  const enlaceWhatsApp =
-    botonExistente.getAttribute("href");
-
-  const numero =
-    enlaceWhatsApp.match(/wa\.me\/([^?]+)/)[1];
-
-  window.open(
-    "https://wa.me/" + numero + "?text=" + mensaje,
+window.open(
+    "https://wa.me/" + numero +
+    "?text=" + encodeURIComponent(mensaje),
     "_blank"
-  );
+);
 
 });
 </script><!-- CARRITO -->
