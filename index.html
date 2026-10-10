@@ -481,14 +481,14 @@ document.getElementById("enviarPedido")
     mensaje += "• " + item.nombre +
       " - $" +
       item.precio.toLocaleString("es-CO") +
-      "%0A";
+      "\n";
 
     total += item.precio;
   });
 
-  mensaje += "%0ATotal: $" +
+  
+mensaje += "\n\nTotal: $" +
     total.toLocaleString("es-CO");
-
 
 const numero = "573172394915";
 
