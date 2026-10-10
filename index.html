@@ -493,11 +493,10 @@ mensaje += "\n\nTotal: $" +
 const numero = "573172394915";
 
 window.open(
-    "https://wa.me/" + numero +
-    "?text=" + encodeURIComponent(mensaje),
+    "https://api.whatsapp.com/send?phone=" + numero +
+    "&text=" + encodeURIComponent(mensaje),
     "_blank"
 );
-
 });
 </script><!-- CARRITO -->
 <div id="carritoCaja" style="
