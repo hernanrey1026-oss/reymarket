@@ -426,7 +426,7 @@ function actualizarCarrito(){
   document.getElementById("contadorCarrito").innerText = carrito.length;
 
   if(carrito.length === 0){
-    listaCarrito.innerHTML = "Tu carrito está vacío.";
+    listaCarrito.innerHTML = document.getElementById("contadorCarrito").innerText = carrito.length;"Tu carrito está vacío.";
     totalCarrito.innerText = "Total: $0";
     return;
   }
