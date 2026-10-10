@@ -474,24 +474,23 @@ document.getElementById("enviarPedido")
   }
 
   let mensaje = "Hola, quiero hacer este pedido en ReyMarket:\n\n";
-  let total = 0;
+let total = 0;
 
-  carrito.forEach(function(item){
-
-    mensaje += "• " + item.nombre +
-      " - $" +
-      item.precio.toLocaleString("es-CO") +
-      "\n";
-
+carrito.forEach(function(item) {
+    mensaje += "• " + item.nombre + " - $" +
+        item.precio.toLocaleString("es-CO") + "\n";
     total += item.precio;
-  });
+});
 
-  
-mensaje += "\n\nTotal: $" +
-    total.toLocaleString("es-CO");
+mensaje += "\nTotal: $" + total.toLocaleString("es-CO");
 
 const numero = "573172394915";
+
 window.open(
+    "https://api.whatsapp.com/send?phone=" + numero +
+    "&text=" + encodeURIComponent(mensaje),
+    "_blank"
+);
     "https://api.whatsapp.com/send?phone=" + numero +
     "&text=" + encodeURIComponent(mensaje),
     "_blank"
